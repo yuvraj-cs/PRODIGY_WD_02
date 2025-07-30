@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stopwatch</h1>
+        
+        <div class="theme-selector">
+            <span>Theme:</span>
+            <button class="theme-btn" data-theme="default">Default</button>
+            <button class="theme-btn" data-theme="dark">Dark</button>
+            <button class="theme-btn" data-theme="neon">Neon</button>
+        </div>
+        
+        <div class="stopwatch">
+            <div class="time-display">
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>:
+                <span id="milliseconds">00</span>
+            </div>
+            
+            <div class="controls">
+                <button id="start-btn" class="btn" title="Shortcut: Space">
+                    <i class="fas fa-play"></i> Start
+                </button>
+                <button id="pause-btn" class="btn" disabled title="Shortcut: Space">
+                    <i class="fas fa-pause"></i> Pause
+                </button>
+                <button id="reset-btn" class="btn" disabled title="Shortcut: R">
+                    <i class="fas fa-redo-alt"></i> Reset
+                </button>
+                <button id="lap-btn" class="btn" disabled title="Shortcut: L">
+                    <i class="fas fa-flag"></i> Lap
+                </button>
+            </div>
+        </div>
+        
+        <div class="laps-container">
+            <h2>Lap Times</h2>
+            <div class="laps-actions">
+                <button id="clear-laps-btn" class="btn btn-small" disabled>
+                    <i class="fas fa-trash"></i> Clear Laps
+                </button>
+                <button id="save-laps-btn" class="btn btn-small" disabled>
+                    <i class="fas fa-save"></i> Save
+                </button>
+            </div>
+            <ul id="laps-list"></ul>
+        </div>
+        
+        <div class="keyboard-shortcuts">
+            <h3>Keyboard Shortcuts</h3>
+            <ul>
+                <li><kbd>Space</kbd> - Start/Pause</li>
+                <li><kbd>R</kbd> - Reset</li>
+                <li><kbd>L</kbd> - Lap</li>
+                <li><kbd>C</kbd> - Clear Laps</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
